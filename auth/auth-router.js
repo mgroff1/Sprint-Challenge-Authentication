@@ -1,11 +1,28 @@
-const router = require('express').Router();
+const router = require("express").Router();
+console.log("auth-router");
 
-router.post('/register', (req, res) => {
-  // implement registration
-});
+const {
+  authenticate,
+  verifyNewUser
+} = require("./authenticate-middleware");
 
-router.post('/login', (req, res) => {
-  // implement login
-});
+const {
+  createUser,
+  userLogin,
+  getAllUsers,
+  logout
+} = require("../controllers/api-controller");
+
+// registration
+router.route("/register").post(createUser);
+
+// login
+router.route("/login").post(authenticate, userLogin);
+
+//logout
+router.route("/logout").delete(logout);
+
+// userInfo
+router.route("/users").get(getAllUsers);
 
 module.exports = router;
