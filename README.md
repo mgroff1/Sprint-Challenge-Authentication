@@ -38,13 +38,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is the purpose of using _sessions_?
+- [XXX] What is the purpose of using _sessions_?
+     Session are used to persist and store authentication data about a user so they don't have to re-enter their credentials on every new request.
 
-- [ ] What does bcrypt do to help us store passwords in a secure manner.
+- [XXX] What does bcrypt do to help us store passwords in a secure manner.
+       Bcrypt has a hashing function/algorithm that hashes a users password multiple times(rounds). This means an attackers has to know the hash, or the algorithm used, and how many rounds were used to generate the hash in order to hack it. This slows down attackers.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [XXX] What does bcrypt do to slow down attackers?
+     Bcrypt has a hashing function/algorithm that hashes a users password multiple times(rounds). This means an attackers has to know the hash, or the algorithm used, and how many rounds were used to generate the hash in order to hack it. This slows down attackers.
 
-- [ ] What are the three parts of the JSON Web Token?
+- [XXX] What are the three parts of the JSON Web Token?
+           The three parts of a JSON Web Token (JWT) is the header, the payload, and the signature.
+
+        - header: contains the algorithm with the token type
+        - payload: includes claims info or any other data we need to store in the token. i.e user id
+        - a string created by base 64 encoding the header and payload together, and then signing it with a secret.
 
 ## Minimum Viable Product
 
